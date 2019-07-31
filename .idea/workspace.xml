@@ -2,10 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5e71d3e5-2793-497e-b084-139d6b52ff89" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/webResources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/own_jira/client.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/some_task.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/some_task.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HelloAnalytics.py" beforeDir="false" afterPath="$PROJECT_DIR$/HelloAnalytics.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client_secrets.json" beforeDir="false" afterPath="$PROJECT_DIR$/credentials.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tes.py" beforeDir="false" afterPath="$PROJECT_DIR$/tes.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/jira/client.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/jira/client.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/work.py" beforeDir="false" afterPath="$PROJECT_DIR$/work.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -50,29 +54,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.work">
-    <configuration name="ыв" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="some_task" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ыв.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python.HelloAnalytics">
     <configuration name="HelloAnalytics" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="some_task" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -139,6 +121,28 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="sdfdsfs" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="some_task" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/sdfdsfs.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="work" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="some_task" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -163,11 +167,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.work" />
-        <item itemvalue="Python.jira" />
         <item itemvalue="Python.HelloAnalytics" />
+        <item itemvalue="Python.jira" />
+        <item itemvalue="Python.sdfdsfs" />
+        <item itemvalue="Python.work" />
         <item itemvalue="Python.integriti" />
-        <item itemvalue="Python.ыв" />
       </list>
     </recent_temporary>
   </component>
@@ -185,7 +189,19 @@
       <workItem from="1564142520940" duration="2639000" />
       <workItem from="1564148258521" duration="8873000" />
       <workItem from="1564221407708" duration="9460000" />
-      <workItem from="1564297896427" duration="11588000" />
+      <workItem from="1564297896427" duration="12092000" />
+      <workItem from="1564330948356" duration="13313000" />
+      <workItem from="1564385566863" duration="198000" />
+      <workItem from="1564390471815" duration="12384000" />
+      <workItem from="1564404415256" duration="9330000" />
+      <workItem from="1564419596683" duration="624000" />
+      <workItem from="1564426715159" duration="6685000" />
+      <workItem from="1564437001727" duration="1132000" />
+      <workItem from="1564442679703" duration="1551000" />
+      <workItem from="1564472363189" duration="30650000" />
+      <workItem from="1564506379558" duration="5431000" />
+      <workItem from="1564558382826" duration="23674000" />
+      <workItem from="1564592678043" duration="17889000" />
     </task>
     <servers />
   </component>
@@ -206,10 +222,11 @@
     </option>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/some_task$HelloAnalytics.coverage" NAME="HelloAnalytics Coverage Results" MODIFIED="1564311207839" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/some_task$work.coverage" NAME="work Coverage Results" MODIFIED="1564311369553" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/some_task$HelloAnalytics.coverage" NAME="HelloAnalytics Coverage Results" MODIFIED="1564610693681" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/some_task$work.coverage" NAME="work Coverage Results" MODIFIED="1564586691890" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/some_task$sdfdsfs.coverage" NAME="sdfdsfs Coverage Results" MODIFIED="1564589246678" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/some_task$.coverage" NAME="ыв Coverage Results" MODIFIED="1564135067549" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/some_task$jira.coverage" NAME="jira Coverage Results" MODIFIED="1564311366429" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/some_task$jira.coverage" NAME="jira Coverage Results" MODIFIED="1564610271217" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/some_task$integriti.coverage" NAME="integriti Coverage Results" MODIFIED="1564151679292" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
