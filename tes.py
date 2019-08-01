@@ -17,12 +17,12 @@ class GetJiraData:
 
         # self.worksheet = self.sheet.worksheet(property='title', value='Лист1')
         self.record_place = None
-        self.type_of_issue = None
         self.priority = None
         self.issue_description = None
         self.name_of_project = None
         self.add_tab_sheet = None
         self.count_missing_rows = 2
+        self.issues_type = ['task', 'story', 'epic', 'bug']
 
     def create_data_sheets(self):
         while True:
@@ -35,37 +35,43 @@ class GetJiraData:
                 for i in boards:
                     print('Board: name - {}, id - {}'.format(i.name, i.id))
 
-                # checking if board in project
+                # checking if board in project and choose board id and record issues to spreadsheet
                 while True:
                     board_id = int(input('Input id board '))
                     matches = list(filter(lambda board: board.id == board_id, boards))
                     if matches:
                         break
 
-                # choose board id and record issues to spreadsheet
                 issues = self.jira_connect.issues_by_board(board_id)
 
                 # filter issues by type --> or view all issues
                 while True:
                     choose_type = input('choose the type or press "rec" to record all issues ')
-                    if choose_type == "rec":
+                    if choose_type.lower() == "rec":
+                        break
+                    elif choose_type in self.issues_type:
+                        issues = list(
+                            filter(lambda type_issue: type_issue.fields.issuetype.name.lower() == choose_type, issues))
                         break
                     else:
-                        issues = list(
-                            filter(lambda type_issue: type_issue.fields.issuetype.name == choose_type, issues))
-                        break
+                        print('choose thr correct type')
 
+                # filter issues by date or record all issues
                 while True:
-                    choose_period = input('Do you want to record for the particular period?  press Y/N  ').lower()
-                    if choose_period == 'n' and not 'y':
-                        break
-                    else:
-                        start_from = input('Enter from date 2019-07-01 - ')
-                        end_to = input('Enter to date 2019-07-04 - ')
-                        issues = list(
-                            filter(lambda date_issue: start_from <= maya.parse(
+                    choose_period = input('Do you want to record for the particular period?  press Y/N  ')
+                    try:
+                        if choose_period.lower() == 'n':
+                            break
+                        elif choose_period.lower() == 'y':
+                            start_from = input('Enter from date 2019-07-01 - ')
+                            end_to = input('Enter to date 2019-07-04 - ')
+                            issues = list(filter(lambda date_issue: start_from <= maya.parse(
                                 date_issue.fields.created).date.isoformat() <= end_to, issues))
-                    break
+                            break
+                        else:
+                            print("please, press Y or N")
+                    except Exception as error:
+                        print(error)
 
                 # record name of project
                 self.add_tab_sheet = self.sheet.add_worksheet(
