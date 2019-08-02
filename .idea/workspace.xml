@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5e71d3e5-2793-497e-b084-139d6b52ff89" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/sanya.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/settings/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/settings/environment.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/own_jira/client.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/own_jira/client.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tes.py" beforeDir="false" afterPath="$PROJECT_DIR$/tes.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/work.py" beforeDir="false" afterPath="$PROJECT_DIR$/work.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -146,6 +145,7 @@
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="JIRA_PASSWORD" value="Cvdovdmav89" />
       </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -162,6 +162,13 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Python.HelloAnalytics" />
+      <item itemvalue="Python.jira" />
+      <item itemvalue="Python.sdfdsfs" />
+      <item itemvalue="Python.test" />
+      <item itemvalue="Python.work" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.work" />
@@ -201,7 +208,7 @@
       <workItem from="1564592678043" duration="19478000" />
       <workItem from="1564646605629" duration="19644000" />
       <workItem from="1564685054380" duration="18749000" />
-      <workItem from="1564731319562" duration="17637000" />
+      <workItem from="1564731319562" duration="24888000" />
     </task>
     <task id="LOCAL-00001" summary="сщььше">
       <created>1564658768784</created>
@@ -236,7 +243,7 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/some_task$HelloAnalytics.coverage" NAME="HelloAnalytics Coverage Results" MODIFIED="1564610693681" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/some_task$sdfdsfs.coverage" NAME="sdfdsfs Coverage Results" MODIFIED="1564589246678" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/some_task$work.coverage" NAME="work Coverage Results" MODIFIED="1564748929189" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/some_task$work.coverage" NAME="work Coverage Results" MODIFIED="1564756201686" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/some_task$test.coverage" NAME="test Coverage Results" MODIFIED="1564743986862" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/some_task$.coverage" NAME="ыв Coverage Results" MODIFIED="1564135067549" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/some_task$jira.coverage" NAME="jira Coverage Results" MODIFIED="1564700596042" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
