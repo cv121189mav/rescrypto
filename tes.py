@@ -5,7 +5,7 @@ import datetime
 import maya
 
 
-class GetJiraData:
+class ConnectJiraData:
     def __init__(self):
         # connect to own_jira api
         self.options = {'server': 'http://jira.rescrypto.pro/'}
@@ -23,6 +23,7 @@ class GetJiraData:
         self.add_tab_sheet = None
         self.count_missing_rows = 2
         self.issues_type = ['task', 'story', 'epic', 'bug']
+
 
     def create_data_sheets(self):
         while True:
@@ -42,21 +43,23 @@ class GetJiraData:
                     if matches:
                         break
 
-                issues = self.jira_connect.issues_by_board(board_id)
+                jql = ''
+
+                def add_to_jql(jql_str, new_str, type_concat='and'):
+                    return ' '.join([jql_str, type_concat, new_str]) if jql_str else new_str
 
                 # filter issues by type --> or view all issues
                 while True:
-                    choose_type = input('choose the type or press "rec" to record all issues ')
+                    choose_type = input(
+                        'choose the type from %s or press "rec" to record all issues ' % self.issues_type)
                     if choose_type.lower() == "rec":
                         break
                     elif choose_type in self.issues_type:
-                        issues = list(
-                            filter(lambda type_issue: type_issue.fields.issuetype.name.lower() == choose_type, issues))
+                        jql = add_to_jql(jql, 'issuetype=%s' % choose_type)
                         break
                     else:
                         print('choose thr correct type')
 
-                # filter issues by date or record all issues
                 while True:
                     choose_period = input('Do you want to record for the particular period?  press Y/N  ')
                     try:
@@ -65,13 +68,16 @@ class GetJiraData:
                         elif choose_period.lower() == 'y':
                             start_from = input('Enter from date 2019-07-01 - ')
                             end_to = input('Enter to date 2019-07-04 - ')
-                            issues = list(filter(lambda date_issue: start_from <= maya.parse(
-                                date_issue.fields.created).date.isoformat() <= end_to, issues))
+                            # todo check date format
+                            jql = add_to_jql(jql, 'created>=%s' % start_from)
+                            jql = add_to_jql(jql, 'created<=%s' % end_to)
                             break
                         else:
                             print("please, press Y or N")
                     except Exception as error:
                         print(error)
+
+                issues = self.jira_connect.issues_by_board(board_id, jql=jql)
 
                 # record name of project
                 self.add_tab_sheet = self.sheet.add_worksheet(
@@ -97,7 +103,7 @@ class GetJiraData:
                         'default': 'noname',
                     },
                     {
-                        'name': 'assignee.name',
+                        'name': 'assignee',
                         'default': 'noname',
                     },
                     {
@@ -147,10 +153,7 @@ class GetJiraData:
                 for column_index, value in enumerate(fields):
                     self.record_place = pygsheets.Cell(pos=(1, 1 + column_index),
                                                        worksheet=self.add_tab_sheet)
-                    if '.' in value['name']:
-                        self.record_place.value = str(value['name'].split('.')[0])
-                    else:
-                        self.record_place.value = str(value['name'])
+                    self.record_place.value = str(value['name'])
 
                 # set data for each issue
                 for count, issue in enumerate(issues):
@@ -158,13 +161,12 @@ class GetJiraData:
                         self.record_place = pygsheets.Cell(pos=(self.count_missing_rows + count, column_index + 1),
                                                            worksheet=self.add_tab_sheet)
                         value = ''
-                        if '.' in field['name']:
-                            if 'assignee' in field['name']:
-                                value = issue.fields.assignee.name
+                        if 'assignee' in field['name']:
+                            value = issue.fields.assignee.name
                         elif 'subtasks' in field['name']:
                             value = len(issue.fields.subtasks)
                         elif 'labels' in field['name']:
-                            value = ', '.join(list([label for label in issue.fields.labels]))
+                            value = ', '.join(label for label in issue.fields.labels)
                         else:
                             value = getattr(issue.fields, field['name'], field['default'])
                         self.record_place.value = str(value)
@@ -176,5 +178,5 @@ class GetJiraData:
                 print("You've entered incorrect id or name of project")
 
 
-runner = GetJiraData()
+runner = ConnectJiraData()
 runner.create_data_sheets()

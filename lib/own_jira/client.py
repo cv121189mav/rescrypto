@@ -5,9 +5,15 @@ from jira.resources import Board, GreenHopperResource
 
 
 class JIRA(JIRA):
-    def issues_by_board(self, board_id):
+    def issues_by_board(self, board_id, jql=None):
+        print(jql)
+        params = {}
+        if jql:
+            params['jql'] = jql
+
         # todo remove replace
         r_json = self._get_json('board/%s/issue/' % board_id,
+                                params=params,
                                 base=self.AGILE_BASE_URL.replace('{agile_rest_path}', 'agile'))
         return [Issue(self._options, self._session, raw_issues_json) for raw_issues_json in r_json['issues']]
 
